@@ -18,10 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKD-Hm-bbg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKD-Hm-bbg">
                                 <rect key="frame" x="113.5" y="28" width="148" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="60p-5n-MFS"/>
+                                    <constraint firstAttribute="width" constant="148" id="MAe-Sa-Rg6"/>
+                                </constraints>
                                 <state key="normal" title="Show Nottification">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -29,10 +32,12 @@
                                     <action selector="showNotificationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzX-Vw-za9"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0nF-iQ-XTK">
-                                <rect key="frame" x="0.0" y="102" width="375" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0nF-iQ-XTK">
+                                <rect key="frame" x="0.0" y="278.5" width="375" height="110"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="cs0-hX-Rrb"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3NQ-Zg-JZr">
                                     <size key="itemSize" width="144" height="110"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -64,12 +69,47 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0u-2M-o0X">
+                                <rect key="frame" x="99" y="78" width="177" height="42"/>
+                                <color key="backgroundColor" red="0.98106676339999999" green="0.31625022780000001" blue="0.2836957987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="JJJ-Jd-Ly6"/>
+                                    <constraint firstAttribute="height" constant="42" id="OfI-5f-IoZ"/>
+                                </constraints>
+                                <state key="normal" title="Show Action Notification">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showActionNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIK-B3-Fri"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not clicked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVJ-Af-6Ca">
+                                <rect key="frame" x="0.0" y="128" width="375" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fKD-Hm-bbg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="0YU-8q-Iy4"/>
+                            <constraint firstItem="0nF-iQ-XTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="68u-pq-AK0"/>
+                            <constraint firstItem="0nF-iQ-XTK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A2N-3R-1SW"/>
+                            <constraint firstItem="0nF-iQ-XTK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fqr-Jh-tOE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cVJ-Af-6Ca" secondAttribute="trailing" id="GJ7-DL-B4X"/>
+                            <constraint firstItem="fKD-Hm-bbg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hxm-TZ-BWJ"/>
+                            <constraint firstItem="0nF-iQ-XTK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ME9-Pa-WaH"/>
+                            <constraint firstItem="cVJ-Af-6Ca" firstAttribute="top" secondItem="k0u-2M-o0X" secondAttribute="bottom" constant="8" id="g8C-6w-Ii1"/>
+                            <constraint firstItem="k0u-2M-o0X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ixx-y0-mSU"/>
+                            <constraint firstItem="cVJ-Af-6Ca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s0f-A1-jBX"/>
+                            <constraint firstItem="k0u-2M-o0X" firstAttribute="top" secondItem="fKD-Hm-bbg" secondAttribute="bottom" constant="8" id="ue6-3V-VgS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="clickLabel" destination="cVJ-Af-6Ca" id="fAt-tJ-okb"/>
                         <outlet property="collectionView" destination="0nF-iQ-XTK" id="nnI-fG-EH3"/>
+                        <outlet property="notificationButton" destination="fKD-Hm-bbg" id="QKx-9W-My1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
